@@ -66,7 +66,7 @@ class FileInputPlugin(FormFieldPlugin):
             # Overwrite ``cleaned_data`` of the ``form`` with path to moved
             # file.
             file_relative_url = saved_file.replace(os.path.sep, '/')
-            cleaned_data[self.data.name] = "{0}{1}".format(
+            cleaned_data[self.data.name] = u"{0}{1}".format(
                 settings.MEDIA_URL,
                 file_relative_url
             )
